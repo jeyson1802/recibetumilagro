@@ -135,7 +135,7 @@ public class RegistroConferenciaServiceImpl implements RegistroConferenciaServic
         Map<String, byte[]> adjuntos = new HashMap<>();
         adjuntos.put(idParticipante + "ConstanciaConferencia", outputStream.toByteArray());
 
-        emailService.sendMail("emails/constancia", "Constancia de Registro a la Conferencia", StringUtil.toStr(parametros.get("CORREO")), parametros, imagenesCorreo, adjuntos);
+        emailService.sendMail("emails/constancia", "Constancia de Registro al Evento", StringUtil.toStr(parametros.get("CORREO")), parametros, imagenesCorreo, adjuntos);
 
         RegistroConferencia participante = registroConferenciaRepository.findById(idParticipante).get();
         participante.setIndicadorCorreo(Constante.INDICADOR_TERMINADO);

@@ -17,7 +17,7 @@ import java.util.Map;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-    private static final Logger logger = LogManager.getLogger(SendinBlueServiceImpl.class);
+    private static final Logger logger = LogManager.getLogger(EmailServiceImpl.class);
 
     @Autowired
     private JavaMailSender javaMailSender;
@@ -34,7 +34,7 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public void sendMail(String template, String asunto, String destino, Map<String, Object> parametros, Map<String, byte[]> imagenesCorreo,  Map<String, byte[]> adjuntos) throws Exception {
 
-        logger.info("Inicio sendMail");
+        logger.info("Inicio EmailServiceImpl");
 
         Context context = new Context();
         context.setVariable("parametros", parametros);
@@ -59,7 +59,7 @@ public class EmailServiceImpl implements EmailService {
 
         javaMailSender.send(mimeMessage);
 
-        logger.info("Fin sendMail");
+        logger.info("Fin EmailServiceImpl");
 
     }
 }
