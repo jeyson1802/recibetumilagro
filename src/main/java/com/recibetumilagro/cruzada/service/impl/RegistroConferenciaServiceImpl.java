@@ -60,13 +60,13 @@ public class RegistroConferenciaServiceImpl implements RegistroConferenciaServic
 
         logger.info("conferencia ===> " + requestRegistroConferencia.toString());
 
-        RegistroConferencia registroConferenciaBD = registroConferenciaRepository.findByCorreo(requestRegistroConferencia.getCorreo());
+        /*RegistroConferencia registroConferenciaBD = registroConferenciaRepository.findByCorreo(requestRegistroConferencia.getCorreo());
 
         if(!StringUtil.isEmpty(registroConferenciaBD)) {
 
             throw new UnprocessableEntityException(EnumErrores.ERROR_422001.getCodigo(),
                     EnumErrores.getMensaje(EnumErrores.ERROR_422001.getCodigo()));
-        }
+        }*/
 
         modelMapper.getConfiguration().setAmbiguityIgnored(true);
 

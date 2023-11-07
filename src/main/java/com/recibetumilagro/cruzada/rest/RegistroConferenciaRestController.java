@@ -44,7 +44,7 @@ public class RegistroConferenciaRestController {
 
         logger.info("Inicio generarConstanciaParticipante.......");
 
-        String nombreArchivo = idParticipante + "_" + "ConstanciaConferencia.pdf";
+        String nombreArchivo = idParticipante + "_" + "ConstanciaEvento.pdf";
         response.setContentType("application/x-pdf");
         response.setHeader("Content-disposition", "inline; filename=" + nombreArchivo);
 
